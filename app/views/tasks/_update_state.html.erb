@@ -1,0 +1,30 @@
+<%= form_for @task , :url => tasks_path(id: @task.id), :method => "put"  do |f| %>
+<div class="py-6 flex flex-col justify-center sm:py-12">
+  <div class="relative py-3 sm:max-w-xl sm:mx-auto">
+    <div class="">
+      <div class="max-w-md mx-auto">
+        <div class="flex items-center space-x-5">
+          <div class="h-10 w-10 bg-yellow-200 rounded-full flex flex-shrink-0 justify-center items-center text-yellow-500 text-2xl font-mono">i</div>
+          <div class="block pl-2 font-semibold text-xl self-start text-gray-700">
+            <h2 class="leading-relaxed">Update State</h2>
+          </div>
+        </div>
+        <div class="divide-y divide-gray-200">
+          <div class="py-8 text-base leading-6 space-y-4 text-gray-700 sm:text-lg sm:leading-7">
+      
+            <div class="flex flex-col">
+            <%= f.select :state,  Task::STATE_HASH.to_a  , { class: "w-full h-10 pl-3 pr-6 text-base placeholder-gray-600 border rounded-lg appearance-none focus:shadow-outline"} %>
+           
+
+           
+            </div>
+          </div>
+            
+                <%= submit_tag "Save", class: "bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700  rounded focus:outline-none" %>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<% end %>
