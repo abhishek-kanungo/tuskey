@@ -71,11 +71,13 @@ Rails.application.configure do
   ActionMailer::Base.smtp_settings = {
     domain: 'https://tuskey.herokuapp.com',
     address:        'smtp.sendgrid.net',
-    port:            465,
+    port:            '465',
     authentication: :plain,
     user_name:      'apikey',
     password:     ENV['SENDGRID_API_KEY'],
-    enable_starttls_auto: true
+    enable_starttls_auto: true,
+    tls:                   true,
+    ssl:                     true
   }
 
   # Enable locale fallbacks for I18n (makes lookups for any locale fall back to
