@@ -10,6 +10,7 @@ class TasksController < ApplicationController
         @task.user = current_user
 
         if @task.save
+            ReminderNotification.new(@task).set_reminder
             redirect_to root_path
         else
             flash[:errors] = @task.errors.full_messages
@@ -21,6 +22,7 @@ class TasksController < ApplicationController
         task = current_user.tasks.find_by_id(params[:id])
     
         if task.update_attributes task_params
+            ReminderNotification.new(task).set_reminder
             flash[:success] = ["State updated"]
         else
             flash[:errors] = task.errors.full_messages
