@@ -66,11 +66,11 @@ Rails.application.configure do
   # Set this to true and configure the email server for immediate delivery to raise delivery errors.
   # config.action_mailer.raise_delivery_errors = false
   config.action_mailer.delivery_method = :smtp
-  config.action_mailer.default_url_options = { host: "https://tuskey.herokuapp.com/" }
+  config.action_mailer.default_url_options = { host: 'https://tuskey.herokuapp.com' }
 
   ActionMailer::Base.smtp_settings = {
-    domain: 'https://tuskey.herokuapp.com/',
-    address:        "smtp.sendgrid.net",
+    domain: 'https://tuskey.herokuapp.com',
+    address:        'smtp.sendgrid.net',
     port:            465,
     authentication: :plain,
     user_name:      'apikey',
