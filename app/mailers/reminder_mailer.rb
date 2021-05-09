@@ -1,6 +1,6 @@
 class ReminderMailer < ApplicationMailer
 
-    default from: "from@tuskey.com"
+    default from: "nemisyz@gmail.com"
 
     def one_hour_reminder(task)
       @task = task
