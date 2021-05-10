@@ -5,7 +5,7 @@
   </head>
   <body>
     <h1>Hi </h1>
-    <p> This is to remind you that your task <%= @task.title %> is scheduled one hour from now at <%= @task.deadline.to_formatted_s(:short) %>
+    <p> This is to remind you that your task <%= @task.title %> is scheduled one hour from now at <%= @task.deadline.localtime.to_formatted_s(:short) %>
     </p>
   </body>
 </html>
