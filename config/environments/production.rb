@@ -76,8 +76,8 @@ Rails.application.configure do
     user_name:      'apikey',
     password:     ENV['SENDGRID_API_KEY'],
     enable_starttls_auto: true,
-    tls:                   true,
-    ssl:                     true
+    tls:                  true,
+    ssl:                  true
   }
 
   # Enable locale fallbacks for I18n (makes lookups for any locale fall back to

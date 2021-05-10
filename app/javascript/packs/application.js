@@ -20,9 +20,11 @@ require("flatpickr/dist/flatpickr.css")
 
 document.addEventListener("turbolinks:load", () => {
     flatpickr("[data-behaviour='flatpickr'", {
-    altInput: true,        
-    enableTime: true,
     dateFormat: "Y-m-d H:i",
+    enableTime: true,
+    dateFormat: 'Z',
+    altInput: true,
+    altFormat: 'Y-m-d h:i K'
     })
 })
 
