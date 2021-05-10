@@ -1,4 +1,5 @@
 class ReminderMailer < ApplicationMailer
+  helper ApplicationHelper
 
     default from: "nemisyz@gmail.com"
 
